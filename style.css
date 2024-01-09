@@ -1,0 +1,183 @@
+
+body {
+    background-color:rgb(49, 49, 49);
+    padding: 30px;
+}
+
+header {
+    padding: 10px;
+    text-align: center;
+}
+#nemtom {  animation: hatter 10s infinite ; background-color: rgb(238, 238, 238);}
+@keyframes hatter {
+    0% { box-shadow: 0px 0px   20px rgb(255, 0, 0)}
+    12.5% { box-shadow: 0px 0px  20px rgb(255, 153, 0)}
+    25% { box-shadow: 0px 0px  20px rgb(255, 230, 0)}
+    37.5% { box-shadow: 0px 0px  20px rgb(0, 255, 0)}
+    50% { box-shadow: 0px 0px 20px rgb(0, 132, 255)}
+    62.5% { box-shadow: 0px 0px 20px rgb(195, 0, 255)}
+    75% { box-shadow: 0px 0px 20px rgb(255, 0, 128)}
+    100% { box-shadow: 0px 0px   20px rgb(255, 0, 0)}
+}
+/*                               cím           */
+h2{ 
+    text-align: center; 
+    text-transform: uppercase;
+    margin: 30px;
+    font-weight: 700;
+}
+
+/*                      melyik játékos van              */
+#dd {
+    padding: 20px;
+    background-color: rgb(238, 238, 238);
+    text-align: center;
+}
+#dd span {
+    font-size: 30px;
+    font-weight: 600;
+}
+#dd img {
+    width: 50px;
+    position: absolute;
+}
+/*                       számláló                          */
+.counter {
+    position: absolute;
+    background-color: white;
+    width: 150px;
+    height: 500px;
+}
+
+/*                    kezdő és újrakezdő gomb              */
+.asd  #restart{
+    color: white;
+    top: 120px; left: 0px;
+    text-align: center;
+    position: relative;
+    font-weight: 700;
+    letter-spacing: 6px;
+}
+#restart:hover {
+    text-decoration: none;
+    color:black; 
+    cursor: pointer;
+}
+
+.kozep {
+    position: relative;
+}
+.asd {
+    position: absolute;
+    display: block;
+    top: 0; left: 50%;
+    transform: translateX(-172px);
+    margin: auto;
+    width: 375px;
+    height: 375px;
+    text-align: center;
+    font-size: 70px;
+    background-color: rgba(0, 255, 0, 0.144);
+    z-index: 2;
+}
+/*                          játék terület               */
+.place {
+    margin: auto;
+    width: 375px;
+    height: 375px;
+    z-index: 1;
+}
+.place .blocks {
+    border: 1px solid black;
+    width: 125px;
+    height: 125px;
+    cursor: pointer; 
+    transition: 0.2s;
+}
+
+.place .blocks:hover{ background-color: rgba(0, 255, 255, 0.11); }
+.blocks img {
+    display: block;
+    margin: auto;
+    width: 120px;
+    height: 120px;
+}
+#mittomen { filter: blur(5px); }
+/*                           játékosokról adatok         */
+.info {
+    margin: auto;
+    top: 0;
+    left: 0;
+    width: 375px;
+    min-height: 220px;
+    padding: 10px;
+    text-align: center;
+}
+
+.info #score {
+    font-size: 30px;
+    font-weight: 600;
+    text-shadow: 0px 0px 7px white;
+    margin: 10px;
+}
+.info input {
+    background-color: rgb(238, 238, 238);
+    color: black;
+    border: none;
+    margin: 5px;
+    border-bottom: 1px solid black;
+}
+input[type=text]{
+    color: white
+}
+#ok {
+    background-color: rgb(0, 255, 0);
+    border: none;
+    padding: 4px 20px;
+    border-radius: 15px;
+}
+input::placeholder{ font-size: 14px; font-weight: 300; }
+.info .plyr{
+    padding: 5px;
+    width: 270px;
+    text-align: center;
+    margin: 5px auto;
+    font-weight: 600;
+}
+.info #player1 { text-shadow: 0px 0px 7px rgb(0, 162, 255) }
+.info #player2 {text-shadow: 0px 0px 7px rgb(255, 0, 0)  }
+/*
+#rstrt {
+    border: 1px solid rgb(98, 114, 133);
+    border-radius: 20px;
+    padding: 5px 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+    margin: auto;
+}
+#rstrt:hover {
+    background-color: rgb(32, 179, 184);
+   
+
+}
+*/
+a{
+    margin-top: -50px;
+    color : grey;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    padding: 10px 30px;
+    transition: 0.5s;
+    background-color: rgb(238, 238, 238);
+    border-radius: 25px;
+}
+a:hover{
+    text-decoration: none;
+    letter-spacing: 0.25em;
+    box-shadow: 0 0 35px blue;   
+}
+a span{
+    z-index: 1;
+}
