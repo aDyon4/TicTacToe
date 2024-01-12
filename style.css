@@ -222,7 +222,7 @@ input::placeholder{ font-size: 14px; font-weight: 300; }
 
 }
 */
-.info a{
+.info span{
     margin-top: -50px;
     color : grey;
     text-transform: uppercase;
@@ -232,12 +232,13 @@ input::placeholder{ font-size: 14px; font-weight: 300; }
     transition: 0.2s;
     background-color: rgb(238, 238, 238);
     border-radius: 25px;
+    cursor: pointer;
 }
-.info a:hover{
+.info span:hover{
     text-decoration: none;
     letter-spacing: 0.25em;
     box-shadow: 0 0 15px blue;   
 }
-.info a span{
+.info span span{
     z-index: 1;
 }
