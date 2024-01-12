@@ -11,6 +11,8 @@
 </head>
 <body>
     
+<img id='uu' src="https://bluesky-cogcms.cdn.imgeng.in/media/37782/rs6avant.png" alt="">
+
 <header>
     <span id='gg1' onclick="page('rules')">Szabályok</span>
     <span id='gg2' onclick="page('game')">Játék</span>
@@ -19,8 +21,21 @@
 
 <div class="rules" id='rulesPage'>
 
-    <div class="container">
-        <p>fepoihafn eadfjeafjope afifpjeapio jfpeajfopjkaeopop eaopjkfrop</p>
+    <div class="container" id='nemtom'>
+        <h2>Üdvözlünk a Double D nevezetű játék főoldalán!</h2>
+        <h3>Merülj el az amőbázás világába , már online is!</h3>
+        <h5>Hívj ki valakit egy megmérettetésre , mutasd meg ki az amőba királya!</h5>
+        <div class="szabalyok">
+            <h2>Szabályok :</h2>
+            <ul>
+                <li>Az amőbát két játékos játssza egy négyzethálós játéktéren.</li>
+                <li>A játékosok felváltva helyezik el bábuikat, a még üres négyzetek valamelyikébe.</li>
+                <li>Az a játékos nyer, aki előbb el tud helyezni 5 saját bábút egy vonalra eső szomszédos négyzetekben.</li>
+                <li>Másképpen fogalmazva, az a játékos nyer, aki elhelyez egymás mellett 3 bábút vízszintesen vagy függőlegesen vagy a két átlós irány valamelyikében.</li>
+                <li>Nagyon ritka esetben döntetlen is előfordulhat, ha a pálya betelik és egyik játékos sem alakított ki 3 egymás melletti bábut.</li>
+            </ul>
+        </div>
+        
     </div>
 
 </div>
@@ -161,6 +176,9 @@
         mm = 0;
     }
     function restartGame(){
+        document.getElementById('rulesPage').style.display = 'none';  
+        document.getElementById('gamePage').style.display = 'block';
+        document.getElementById('developersPage').style.display = 'none';
         // Alaphelyzetbe állítja a játékosok adatait
         plyr1Score = 0; document.getElementById('player1').innerHTML = '';
         plyr2Score = 0; document.getElementById('player2').innerHTML = '';
