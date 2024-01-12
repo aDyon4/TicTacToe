@@ -4,63 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="https://media.istockphoto.com/id/1279358029/vector/letter-d-logo-lettermark-dd-monogram-typeface-type-emblem-character-trademark.jpg?s=612x612&w=0&k=20&c=nSNB2jgnlw4VN4PFS8oZ23olqDJZOZba1lbGAoipwsc=">
     <link rel="stylesheet" href="style.css">
-    <title>Double D</title>
+    <title>Double D - TicTacToe</title>
 </head>
 <body>
     
+<header>
+    <a href="rules.html">Szabályok</a>
+    <a href="game.html">Játék</a>
+</header>
 
 
+<div class="game">
 
+    <div class="container" id="nemtom">
 
-<div class="container" id="nemtom">
-
-    <div class="counter">
-        <span id="score"></span><br>
-        <p class="plyr" id='player1'></p>
-        <p class="plyr" id='player2'></p>
-    </div>
-
-    <div id='dd' >
-        <span>Következő: </span> 
-        <span id="fdP"></span>
-        <img src="" id="fdI" alt="">
-    </div>
-
-    <div class="kozep">
-    
-        <div class='asd' id='ff'>
-            <span id='restart' onclick="newGame()">Kezdés</span>
+        <div class="counter">
+            <span id="score"></span><br>
+            <p class="plyr" id='player1'></p>
+            <p class="plyr" id='player2'></p>
         </div>
-        <div class="row place" id='mittomen'>
-            
-            <div class="left col-lg-4 col-sm-4">
-                <div class="blocks" id='block00' onclick='valaszt(0, 0)'>  </div>
-                <div class="blocks" id='block01' onclick='valaszt(0, 1)'>  </div>
-                <div class="blocks" id='block02' onclick='valaszt(0, 2)'>  </div>
+
+        <div id='dd' >
+            <span>Következő: </span> 
+            <span id="fdP"></span>
+            <img src="" id="fdI" alt="">
+        </div>
+
+        <div class="kozep">
+            <div class='asd' id='ff'>
+                <span id='restart' onclick="newGame()">Kezdés</span>
             </div>
-            <div class="center col-lg-4 col-sm-4">
-                <div class="blocks" id='block10' onclick='valaszt(1, 0)'>  </div>
-                <div class="blocks" id='block11' onclick='valaszt(1, 1)'>  </div>
-                <div class="blocks" id='block12' onclick='valaszt(1, 2)'>  </div>
-            </div>
-            <div class="right col-lg-4 col-sm-4">
-                <div class="blocks" id='block20' onclick='valaszt(2, 0)'>  </div>
-                <div class="blocks" id='block21' onclick='valaszt(2, 1)'>  </div>
-                <div class="blocks" id='block22' onclick='valaszt(2, 2)'>  </div>
+            <div class="row place" id='mittomen'>       
+                <div class="left col-lg-4 col-sm-4">
+                    <div class="blocks" id='block00' onclick='valaszt(0, 0)'>  </div>
+                    <div class="blocks" id='block01' onclick='valaszt(0, 1)'>  </div>
+                    <div class="blocks" id='block02' onclick='valaszt(0, 2)'>  </div>
+                </div>
+                <div class="center col-lg-4 col-sm-4">
+                    <div class="blocks" id='block10' onclick='valaszt(1, 0)'>  </div>
+                    <div class="blocks" id='block11' onclick='valaszt(1, 1)'>  </div>
+                    <div class="blocks" id='block12' onclick='valaszt(1, 2)'>  </div>
+                </div>
+                <div class="right col-lg-4 col-sm-4">
+                    <div class="blocks" id='block20' onclick='valaszt(2, 0)'>  </div>
+                    <div class="blocks" id='block21' onclick='valaszt(2, 1)'>  </div>
+                    <div class="blocks" id='block22' onclick='valaszt(2, 2)'>  </div>
+                </div>
             </div>
         </div>
+
+        <div class="info">   
+            <input type="text" id="name1" value="" placeholder='Első játékos neve (O)'>
+            <input type="text" id="name2" value="" placeholder='Második játékos neve (X)'>
+            <br>
+            <input type="submit" value="ok" id="ok" onclick="ok()">
+            <p></p> 
+            <a href=""><span id="rstrt" onclick="restartGame()">Új játék</span><i></i></a>
+        </div>
+
     </div>
-    <div class="info">
-        
-        <input type="text" id="name1" value="" placeholder='Első játékos neve (O)'>
-        <input type="text" id="name2" value="" placeholder='Második játékos neve (X)'>
-        <br>
-        <input type="submit" value="ok" id="ok" onclick="ok()">
-        <p></p>
-        
-        <a href=""><span id="rstrt" onclick="restartGame()">Új játék</span><i></i></a>
-    </div>
+
 </div>
 
 
@@ -74,8 +79,8 @@
     let palya = [['.','.','.'],['.','.','.'],['.','.','.']];
     let kx = 0;
     let whichImage = '';
-    let player1;
-    let player2;
+    let player1 = 'player1';
+    let player2 = 'player2';
     let plyr1Score = 0;
     let plyr2Score = 0;
     let mm = 0;
