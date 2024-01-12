@@ -5,18 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="icon" type="image/x-icon" href="https://media.istockphoto.com/id/1279358029/vector/letter-d-logo-lettermark-dd-monogram-typeface-type-emblem-character-trademark.jpg?s=612x612&w=0&k=20&c=nSNB2jgnlw4VN4PFS8oZ23olqDJZOZba1lbGAoipwsc=">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Double D - TicTacToe</title>
 </head>
 <body>
     
 <header>
-    <a href="rules.html">Szabályok</a>
-    <a href="game.html">Játék</a>
+    <span id='gg1' onclick="page('rules')">Szabályok</span>
+    <span id='gg2' onclick="page('game')">Játék</span>
+    <span id='gg3' onclick="page('developers')">Rólunk</span>
 </header>
 
+<div class="rules" id='rulesPage'>
 
-<div class="game">
+    <div class="container">
+        <p>fepoihafn eadfjeafjope afifpjeapio jfpeajfopjkaeopop eaopjkfrop</p>
+    </div>
+
+</div>
+
+<div class="developers" id='developersPage'>
+
+    <div class="container" id="nemtom">
+        <h1>Fejlesztők</h1>
+        <div class="us">
+            <span>Ádám Dominik: </span>
+            <span>Kódolás, Kivitelezés</span>
+            <br>
+            <span>Csősz Dominik: </span>
+            <span>Dizájn, Szöveg alkotás</span>
+        </div>
+        
+        <br>
+        <a href="https://github.com/aDyon4/TicTacToe" class="fa fa-github" target="blank"> github</a>
+    </div>
+
+</div>
+
+<div class="game" id='gamePage'>
 
     <div class="container" id="nemtom">
 
@@ -74,6 +101,24 @@
 
 
 <script>
+
+    function page(name){
+        if(name == 'game'){
+            document.getElementById('rulesPage').style.display = 'none';  
+            document.getElementById('gamePage').style.display = 'block';
+            document.getElementById('developersPage').style.display = 'none';
+        }
+        else if(name == 'rules'){
+            document.getElementById('rulesPage').style.display = 'block';
+            document.getElementById('gamePage').style.display = 'none'; 
+            document.getElementById('developersPage').style.display = 'none';
+        }
+        else if(name == 'developers'){
+            document.getElementById('rulesPage').style.display = 'none'; 
+            document.getElementById('gamePage').style.display = 'none';
+            document.getElementById('developersPage').style.display = 'block';
+        }
+    }
 
     // Változók
     let palya = [['.','.','.'],['.','.','.'],['.','.','.']];
